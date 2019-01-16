@@ -42,6 +42,7 @@ Instrucciones:
 -Ingresa los últimos tres dígitos de tu servidor en __**#código.**__`)
         .setImage("https://i.imgur.com/IeIuzix.png")
         .setColor("#8600b3")
+        .addField("Hosted by" , message.author)
         .setFooter("Dev By !Fabian Araya (Xccursed_CR)", "https://i.imgur.com/ADnSULk.jpg")
         
     
