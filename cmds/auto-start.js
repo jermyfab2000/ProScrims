@@ -71,18 +71,13 @@ module.exports.run = async (bot, message, args) => {
                 bot.guilds.get(message.guild.id).channels.get(codes).send("!start").catch((err) => {
                     console.log(err);
                 });
-            }else if (min === 01 || min === 31){
-                embed.setTitle("Se realizara un REQ En 4 minutos!");
+                }else if (min === 01 || min === 31){
+                embed.setTitle("Se realizara un RMK 1 minuto!");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
-            }else if (min === 04 || min === 34){
-                embed.setTitle("1 Minuto Para REQ Por Favor estar atento al Conteo y cargar contenido");
-                bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
-                    console.log(err);
-                });
-			}else if (min === 05 || min === 35){
-                embed.setTitle("Iniciando REQ!");
+	        }else if (min === 02 || min === 32){
+                embed.setTitle("Iniciando RMK__**Recuerden Poner Sus Ultimos 3 digitos En código-rmk**__");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
