@@ -6,7 +6,7 @@ const owner = settings.owner;
 
 module.exports.run = async (bot, message, args) => {
    let roles = message.guild.roles;
-   let scrimmers = message.guild.defaultRole;
+   let scrimmers = message.guild.roles.find( r => r.name === "Player");
    let snipeChannel = message.channel;
    const filter = m => !m.author.bot;
    let game = new Listing();
@@ -40,7 +40,7 @@ Instrucciones:
 -Al escuchar el conteo dale listo al __**GO**__. 
 -En caso de ps4 darle listo con el mouse.
 -Ingresa los últimos tres dígitos de tu servidor en __**#código.**__`)
-        .setImage("https://i.imgur.com/hxHm6ZV.jpg")
+        .setImage("https://i.imgur.com/IeIuzix.png")
         .setColor("#8600b3")
         .setFooter("Dev By !Fabian Araya (Xccursed_CR)", "https://i.imgur.com/ADnSULk.jpg")
         
