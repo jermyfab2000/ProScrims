@@ -77,7 +77,7 @@ module.exports.run = async (bot, message, args) => {
                     console.log(err);
                 });
 	        }else if (min === 02 || min === 32){
-                embed.setTitle("Iniciando RMK__**Recuerden Poner Sus Ultimos 3 digitos En código-rmk**__");
+                embed.setTitle("Iniciando RMK __**Recuerden Poner Sus Ultimos 3 digitos En código-rmk**__");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
