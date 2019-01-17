@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
             vc.join().then(connection => {
                 console.log("[VOICE CHANNEL] joined countdown channel.");
-                const stream = ytdl(id, {highWaterMark: 1024 * 1024 * 10 , quality: 'highestaudio'});
+                const stream = ytdl(id, {highWaterMark: 1024 * 1024 * 10 , quality: 'lowestaudio'});
                 const dispatcher = connection.playStream(stream, streamOptions);
 
                 dispatcher.on("end", end => {
