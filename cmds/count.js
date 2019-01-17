@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     const streamOptions = {seek: 0, volume: 1};
     let voiceChannelID = "534890071606689792";
-    ytdl(https://youtu.be/EKUe68rOi8A, {
+    ytdl('https://youtu.be/EKUe68rOi8A', {
         highWaterMark: 1024 * 1024 * 10 // 10 megabytes
     })
 
