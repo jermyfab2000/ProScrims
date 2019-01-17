@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     let voice = "534890071606689792";
     let codes = "534173973953642496";
     let general = "534190682332594187";
-	let req = "534890035208650762"
+	
 
     console.log("Activating Auto Comamand");
 
@@ -71,26 +71,7 @@ module.exports.run = async (bot, message, args) => {
                 bot.guilds.get(message.guild.id).channels.get(codes).send("!start").catch((err) => {
                     console.log(err);
                 });
-                }else if (min === 01 || min === 31){
-                embed.setTitle("Se realizara un RMK 1 minuto!");
-                bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
-                    console.log(err);
-                });
-	        }else if (min === 02 || min === 32){
-                embed.setTitle("Iniciando RMK __**Recuerden Poner Sus Ultimos 3 digitos En código-rmk**__");
-                bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
-                    console.log(err);
-                });
-
-                bot.guilds.get(message.guild.id).channels.get(req).send("!count").catch((err) => {
-                    console.log(err);
-                });
-
-                bot.guilds.get(message.guild.id).channels.get(req).send("!start").catch((err) => {
-                    console.log(err);
-                });
-			
-			}
+	  }
 				
             const filter = m => !m.author.bot;
             const collect = bot.guilds.get(message.guild.id).channels.get(general)
