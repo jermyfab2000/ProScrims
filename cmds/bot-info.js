@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const help = require('./help-scrim')
 module.exports.run = async (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
