@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
     let voice = "534890071606689792";
     let codes = "534173973953642496";
     let general = "534190682332594187";
+    let commands = "534909320710717441";
 	
 
     console.log("Activating Auto Comamand");
@@ -68,7 +69,7 @@ module.exports.run = async (bot, message, args) => {
                     console.log(err);
                 });
 
-                bot.guilds.get(message.guild.id).channels.get(codes).send("!count").catch((err) => {
+                bot.guilds.get(message.guild.id).channels.get(commands).send("!count").catch((err) => {
                     console.log(err);
                 });
 
@@ -79,7 +80,7 @@ module.exports.run = async (bot, message, args) => {
             }
 				
             const filter = m => !m.author.bot;
-            const collect = bot.guilds.get(message.guild.id).channels.get(general)
+            const collect = bot.guilds.get(message.guild.id).channels.get(commands)
                 .createMessageCollector(filter, {time: 60000});
 
             collect.on('collect', m => {
@@ -87,7 +88,7 @@ module.exports.run = async (bot, message, args) => {
                     if(validation(allowedRoles.roles, m.member.roles.array()) || m.member.id === owner){
                         clearInterval(autoScrims);
                         collect.stop();
-                        bot.guilds.get(message.guild.id).channels.get(general).send("Auto Scrims Detenidas").catch((err) => {
+                        bot.guilds.get(message.guild.id).channels.get(commands).send("Auto Scrims Detenidas").catch((err) => {
                             console.log(err);
                         });
                     }
