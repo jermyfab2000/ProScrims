@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     const streamOptions = {seek: 0, volume: 1};
     let voiceChannelID = "534890071606689792";
-    let id = 'https://youtu.be/mT96R4JEtus';
+    let id = 'https://youtu.be/y1eF7kX0oYc';
     console.log("Starting Voice Command");
     
     if (voiceChannelID != null) {
