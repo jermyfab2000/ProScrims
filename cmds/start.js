@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail("https://i.imgur.com/eR5D1t0.png")
         .setURL("https://www.twitch.tv/becc4")
         .addField("Instrucciones :",`
-		-Servidor: __**US-East**__
+	-Servidor: __**Brazil**__
         -Carga contenido. 
         -Espera en el canal de conteo. 
         -Al escuchar el conteo dale listo al __**GO**__. 
