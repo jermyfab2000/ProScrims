@@ -83,7 +83,7 @@ module.exports.run = async (bot, message, args) => {
                 .createMessageCollector(filter, {time: 60000});
 
             collect.on('collect', m => {
-                if (m.content === "!auto-stop"){
+                if (m.content === "!auto-stop" || m.content === "!auto-start"){
                     if(validation(allowedRoles.roles, m.member.roles.array()) || m.member.id === owner){
                         clearInterval(autoScrims);
                         collect.stop();
@@ -93,7 +93,6 @@ module.exports.run = async (bot, message, args) => {
                     }
                 }
             });
-
 
         }, 60000);
     
