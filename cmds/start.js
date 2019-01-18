@@ -34,12 +34,12 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail("https://i.imgur.com/eR5D1t0.png")
         .setURL("https://www.twitch.tv/becc4")
         .addField("Instrucciones :",`
-	-Servidor: __**Brazil**__
-        -Carga contenido. 
-        -Espera en el canal de conteo. 
-        -Al escuchar el conteo dale listo al __**GO**__. 
-        -En caso de ps4 darle listo con el mouse.
-        -Ingresa los últimos tres dígitos de tu servidor`)
+-Servidor: __**Brazil**__
+-Carga contenido. 
+-Espera en el canal de conteo. 
+-Al escuchar el conteo dale listo al __**GO**__. 
+-En caso de ps4 darle listo con el mouse.
+-Ingresa los últimos tres dígitos de tu servidor`)
         .setImage("https://i.imgur.com/IeIuzix.png")
         .setColor("#24E711")
         .addField("Hosted by" , message.author)
