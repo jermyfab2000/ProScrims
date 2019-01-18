@@ -41,25 +41,29 @@ module.exports.run = async (bot, message, args) => {
             let time = new Date();
             let min = time.getMinutes();
             let embed = new Discord.RichEmbed()
-                .setColor("#00cc00");
 
             if (min === 50 || min === 20){
-				embed.setTitle("Siguiente Scrim En 10 Minutos **Unanse al Conteo!!!**");
+		embed.setTitle("Siguiente Scrim En 10 Minutos **Unanse al Conteo!!!**")
+		embed.setColor("#00cc00");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
             }else if (min === 55 || min === 25){
-                embed.setTitle("Siguiente Scrim En 5 Minutos **Unanse al Conteo!!!**");
+                embed.setTitle("Siguiente Scrim En 5 Minutos **Unanse al Conteo!!!**")
+		embed.setColor("#EDFF21");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
             }else if (min === 59 || min === 29){
-                embed.setTitle("Siguiente Scrim En 1 Minuto **Por Favor estar atento al Conteo y cargar contenido!");
+                embed.setTitle("Siguiente Scrim En 1 Minuto **Por Favor estar atento al Conteo y cargar contenido!**")
+				embed.setColor("#F80000");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
+            
             }else if (min === 00 || min === 30){
-                embed.setTitle("La Scrim Ya Empezo, Buena Suerte!! __**Recuerden Poner Sus Ultimos 3 digitos En #código**__");
+                embed.setTitle("La Scrim Ya Empezo, Buena Suerte!! __**Recuerden Poner Sus Ultimos 3 digitos En #código**__")
+		embed.setColor("#00cc00");
                 bot.guilds.get(message.guild.id).channels.get(general).send({embed: embed}).catch((err) => {
                     console.log(err);
                 });
@@ -71,7 +75,8 @@ module.exports.run = async (bot, message, args) => {
                 bot.guilds.get(message.guild.id).channels.get(codes).send("!start").catch((err) => {
                     console.log(err);
                 });
-	  }
+
+            }
 				
             const filter = m => !m.author.bot;
             const collect = bot.guilds.get(message.guild.id).channels.get(general)
