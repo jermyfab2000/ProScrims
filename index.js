@@ -61,7 +61,10 @@ bot.on('ready', async () => {
 });
 
 
-bot.on("message",msg => {
+bot.on("message" , async msg => {
+	if (msg.content.startsWith(prefix)){
+		if (msg.deletable) await msg.delete();
+	}
     if (msg.channel.type === "dm") return;
 
     let msg_array = msg.content.split(" ");
