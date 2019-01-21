@@ -5,6 +5,9 @@ const settings = require('./../settings.json');
 const owner = settings.owner;
 
 module.exports.run = async (bot, message, args) => {
+   let voiceChannelID = "534890071606689792";
+   let voice_channel = message.guild.channels.get(voiceChannelID);
+   let members = message.guild.channels.get(voiceChannelID).members.size;
    let roles = message.guild.roles;
    let scrimmers = message.guild.roles.find( r => r.name === "Player");
    let snipeChannel = message.channel;
@@ -44,6 +47,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#00A6FF")
         .addField("Hosted by" , message.author)
         .setFooter("Dev By !Fabian Araya (Xccursed_CR)", "https://i.imgur.com/ADnSULk.jpg")
+        .setTimestamp()
 
         
     
@@ -136,8 +140,7 @@ module.exports.run = async (bot, message, args) => {
             str += game.data[i].users[j] + "\n";
         }
         last3.addField(`Servidor ${game.data[i].id.toUpperCase()} - ${game.data[i].users.length} Jugadores` , str, true);
-	last3.setFooter(`${game.data.length} Servidores | ${game.users.length} Jugadores`)
-        last3.setTimestamp()
+	last3.setFooter(`[ ${game.data.length} Servidores | ${game.users.length} Jugadores ] [ ${members} Jugadores En ${voice_channel.name} ]`)
     }    
 
     editLast3.edit({embed: last3}).catch((err) => {
