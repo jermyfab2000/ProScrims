@@ -13,6 +13,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Comando para iniciar Scrims automaticamente 24/7 ;",`!auto-start inicia scrims automáticamente sin tener que poner ningún código pero puedes iniciarlos manualmente
 	Pero para ahorrar tiempo ya he añadido que lo inicie automáticamente .
 	para detener los scrims automáticos solo tienes que poner el codigo !auto-stop`)
+    .addField("comando de votacion","!vta para hacer una seleccion de modo de juego")
     .setColor("#15f153")
     .setThumbnail(bicon)
     .addField("Creado En", bot.user.createdAt)
