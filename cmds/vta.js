@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 		  .addField("Squads!" , `${Squads}: ${Sqds}`)
 		  .setFooter(`Conteo Renombrado A @Solos [${members}]`)	
     message.channel.send({embed: embedr});
-	voice_channel.setName('Conteo (NA-East) @Solos')
+	voice_channel.setName('Conteo (BRAZIL) @Solos')
    .then(newChannel => console.log(`Channel's new name is ${newChannel.name}`))
    .catch(console.error);
   } else if (Dus > Sols > Sqds){
@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 		  .addField("Squads!" , `${Squads}: ${Sqds}`)  
 		  .setFooter(`Conteo Renombrado A @Duos [${members}]`)		
     message.channel.send({embed: embeds});
-	voice_channel.setName('Conteo (NA-East) @Duos')
+	voice_channel.setName('Conteo (BRAZIL) @Duos')
    .then(newChannel => console.log(`Channel's new name is ${newChannel.name}`))
    .catch(console.error);
 	} else if (Sqds > Sols > Dus){
@@ -54,7 +54,7 @@ module.exports.run = async (bot, message, args) => {
 		  .addField("Squads!" , `${Squads}: ${Sqds}`) 
           .setFooter(`Conteo Renombrado A @Squads [${members}]`)			  
     message.channel.send({embed: embeds});
-	voice_channel.setName('Conteo (NA-East) @Squads')
+	voice_channel.setName('Conteo (BRAZIL) @Squads')
    .then(newChannel => console.log(`Channel's new name is ${newChannel.name}`))
    .catch(console.error);
 	}else {
