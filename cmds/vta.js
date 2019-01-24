@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     await msg.react(Duos);
     await msg.react(Squads);
 
-    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === Solos || reaction.emoji.name === Duos || reaction.emoji.name === Squads, {time:5000});
+    const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === Solos || reaction.emoji.name === Duos || reaction.emoji.name === Squads, {time:120000});
     let Sols = reactions.get(Solos) ? reactions.get(Solos).count -1 : 0
     let Dus = reactions.get(Duos) ? reactions.get(Duos).count -1 : 0
 	let Sqds = reactions.get(Squads) ? reactions.get(Squads).count -1 : 0
